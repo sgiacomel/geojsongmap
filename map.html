@@ -1,0 +1,64 @@
+<!doctype html>
+
+<html lang="en">
+	
+<head>
+	<meta charset="utf-8">
+	<title>Geojson to google maps</title>
+	<meta name="description" content="Geojson to google maps">
+	<meta name="author" content="Simone Giacomel">
+	<style>
+	html, body {
+		height: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	#map {
+		height: 100%;
+	}
+	#legend { 
+	    position: absolute; 
+	    right: 40px; 
+	    bottom: 20px; 
+	    background: rgba(0,0,0,0.5); 
+	    color: #fff; 
+	    font-size: 1rem;
+	}
+	#legend ul { 
+	    padding: 10px 20px 10px 10px; 
+	    margin: 0 0 0 20px; 
+	}
+	#reset-view {
+		cursor: pointer;
+		border: 1px solid #555;
+	}
+	#container-fluid {
+		position: fixed;
+		top: 0px;
+		left: 0;
+		bottom: 0px;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	</style>
+</head>
+
+<body>
+	<script src="jquery.js"></script>
+	<script src="async.js"></script>
+	<script src="oms.min.js"></script>
+
+	<div id="container-fluid">
+		<div id="map"></div>
+		<div id="legend">
+			<ul><li>To view the details for a segment, click on the line or on the markers</li></ul>
+		</div>
+	</div>
+
+	<script src="map.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMETxi9mRjWMt726OBZAAhRyXj1xyuPOs&callback=initMap"></script>
+</body>
+
+</html>
